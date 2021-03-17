@@ -1,0 +1,7 @@
+{
+  "name": "projetoCDM",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
