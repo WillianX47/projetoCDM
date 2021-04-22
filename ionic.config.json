@@ -1,0 +1,7 @@
+{
+  "name": "TelaPagamento",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
