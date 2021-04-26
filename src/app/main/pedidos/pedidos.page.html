@@ -1,0 +1,173 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="success">
+      <h1 style="text-align: center;"><strong> Seus Pedidos </strong></h1>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- Margens Aplicadas a toda a página -->
+  <ion-grid style="margin-left: 10px; margin-right:10px;margin-bottom: 5px;">
+    
+    <!-- Mais Pedidos do Cliente -->
+    <ion-item style="margin-top: 13px; margin-bottom: -20px;">
+      <ion-text color="success">
+        <h4 >Mais pedidos por você</h4>
+      </ion-text>
+    </ion-item>
+    <ion-row>
+      <ion-col size="">
+        <div>
+          <ion-card (click)="favoritos()">
+            <ion-card-header>
+              <img class="centralizada" src="https://lh3.googleusercontent.com/iytWl6zs5jOmCzxtF-bTLIkSr3aLZeP71d1n973rZzhqbd7A8FKZOw6XbaPXYxnHdUDEXUilAWN1Q_HsPV_BVcP18IWhazBLyMNu1V7AdphJrNSW5-9K6eqHrCfABrsa2nwCthJrH93hMUyercnsUFnCNvYo3Qer8_NZlJER8F4LvX8UCmG1xKzm87Qb897_sLUHOBaZmRp2Sgznq-6gXy75XbEwjEC_Lw0qTsFWxqgdYagPnp8HyXOaERzydR2zyN5Ca7DBVsHh6kVQAhz-X7QX-8RdTntkxfwxpTEZsNtzSv8RwhEHPHUEJlTP_RMqwXwdfARftzRZgP_4j76drQBWfaEG1XHxA6F7gXERYuLZwQom5J6xOYK-RR_lPWNosurOGRmY8uYQu2dEHcv9BOqzWjLid25d3SgaX8izZ64yXzjN9jIF5gbIe5VtkpJQZlbXp5DZ41XscyLJ-dXzXABsXzz0Wat1PICQQnRlGtz085C8tOw7WemLGUJSiFyeN__1KXTwzunJQu5tUqOEnH6y6la0I-9Wyzx8qEXsBQXR2vIu-s7fZXt4bGMQtNDbYaOU7utmOebXpTgUuMoaoYTe7rfseb45Bx7speOAOknieEWaUj6Ic8zs7IkfISsmo1uQF4PvB9DRX6DEpRGImAzXCAnZ_p-ExgH5eUxJK6Oqz8wGcGXOFmxUa-1JSj4G9__s6WHp4JAfWZ_EDCoUHkY9=w266-h267-no?authuser=0"
+            style="vertical-align:middle" width="70" height="70">
+              <ion-card-subtitle style="text-align: center; margin-top: 10px;">Barraca do Zé</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <ion-card (click)="favoritos()">
+            <ion-card-header>
+              <img class="centralizada" src="https://lh3.googleusercontent.com/jZzlOCYKj5dgyE5UVn9QZojI0sCqS6whze0_WXUtH7XtQMQha_ifMQhtbM6zCE5DnXiihXzct20AGLnEr2wIO95vTRCAsylhPtch0RfU2ZDtNIBYXh4_tXYt0MuC43BaCW6JYqKk92dJ4YIy95fdJQxnghr_vCRCz_5mxbu8UkIqkIjDoC0xN_XSbG3NR7-JB16LmbCAafiGxBgae7euaTXnCQkKoI-wpXKB-K8iQGe7a7eATscy8AGBcXUMxo_AAVrYKLCNM19nuj6jyfOL63ykAB0OtMEKbjGwwXAH912GizGI7v3c7U4tpjXi2K6RUaV_81hgJwprYGt23uq32U4bmjer1ueYKgjlCiVMRVvJnFjFm-FBl7ByZajwJvXUDfLlHOa6M16AX1oCtPw3MpAOP96Kj2mVdeVfpTpM7T_M7NqQTOn4oHNsI_IsUSQtzviP4nrhacDihhp6_STzPBx1gTB4qZaoClRBHNgQMvZ6vSZEbJWBYstrnP8in-0hsE8WO8BmWQLfDYXw53GESQZWDs2Md5SdZcWxl1AJzrXHBEu9y9OhTH9fq16UGtlRX2MUQPU_GwfU_z0cEbnWfBjfTnFpukTdppCqRzTHGRTZs0Vu0HyulDZyNXWhojmcTvZr9c13Zk6jU0epgayYJL15h6mTJt9h8vDj4KWtyttquL0JERbcq9bS2vxOR7ioJlziaw_YHcONUIyZVD2IoxHX=w266-h267-no?authuser=0"
+            style="vertical-align:middle" width="70" height="70">
+              <ion-card-subtitle style="text-align: center; margin-top: 10px;">Barraca do Alemão</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+    <!-- Fim do Mais pedidos -->
+
+    <!-- Histórico -->
+    <ion-item style="margin-top: 13px; margin-bottom: -11px;">
+      <ion-text color="success">
+        <h3 style="border-bottom: solid;"><strong>Histórico:</strong></h3>
+      </ion-text>
+    </ion-item>
+    
+    <!-- Pedido 1 -->
+    <ion-item>
+      <h6 style="color:grey;"><br>Dom, 25 abril 2021:</h6>
+    </ion-item>
+
+    <ion-card>
+      <ion-card-header>
+        <img  src="https://lh3.googleusercontent.com/iytWl6zs5jOmCzxtF-bTLIkSr3aLZeP71d1n973rZzhqbd7A8FKZOw6XbaPXYxnHdUDEXUilAWN1Q_HsPV_BVcP18IWhazBLyMNu1V7AdphJrNSW5-9K6eqHrCfABrsa2nwCthJrH93hMUyercnsUFnCNvYo3Qer8_NZlJER8F4LvX8UCmG1xKzm87Qb897_sLUHOBaZmRp2Sgznq-6gXy75XbEwjEC_Lw0qTsFWxqgdYagPnp8HyXOaERzydR2zyN5Ca7DBVsHh6kVQAhz-X7QX-8RdTntkxfwxpTEZsNtzSv8RwhEHPHUEJlTP_RMqwXwdfARftzRZgP_4j76drQBWfaEG1XHxA6F7gXERYuLZwQom5J6xOYK-RR_lPWNosurOGRmY8uYQu2dEHcv9BOqzWjLid25d3SgaX8izZ64yXzjN9jIF5gbIe5VtkpJQZlbXp5DZ41XscyLJ-dXzXABsXzz0Wat1PICQQnRlGtz085C8tOw7WemLGUJSiFyeN__1KXTwzunJQu5tUqOEnH6y6la0I-9Wyzx8qEXsBQXR2vIu-s7fZXt4bGMQtNDbYaOU7utmOebXpTgUuMoaoYTe7rfseb45Bx7speOAOknieEWaUj6Ic8zs7IkfISsmo1uQF4PvB9DRX6DEpRGImAzXCAnZ_p-ExgH5eUxJK6Oqz8wGcGXOFmxUa-1JSj4G9__s6WHp4JAfWZ_EDCoUHkY9=w266-h267-no?authuser=0"
+            style="vertical-align:middle" width="50" height="50">
+        <ion-card-title>Barraca do Zé</ion-card-title>
+        <ion-card-subtitle >Pedido concluido - 1125</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <ion-item>
+          <ion-col>
+            <h5>5 x Tomates</h5>
+          </ion-col>
+          <ion-col style="text-align: right;">
+            <h5>R$ 50,00</h5>
+          </ion-col>
+        </ion-item>
+        <ion-item>
+          <ion-col>
+            <h5>2 x Abacates</h5>
+          </ion-col>
+          <ion-col style="text-align: right;">
+            <h5>R$ 25,00</h5>
+          </ion-col>
+        </ion-item>
+        <ion-item>
+          <ion-col>
+            <h5>1 Pastel Pizza</h5>
+          </ion-col>
+          <ion-col style="text-align: right;">
+            <h5>R$ 6,00</h5>
+          </ion-col>
+        </ion-item>
+        <ion-item>
+          <ion-col>
+            <h5><strong>Total:</strong></h5>
+          </ion-col>
+          <ion-col style="text-align: right;">
+            <h5>R$ 81,00</h5>
+          </ion-col>
+        </ion-item>
+      </ion-card-content>
+      <ion-row>
+        <ion-col>
+          <ion-button color="success" expand="block" fill="outline">Ver Pedido</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="repeat()" color="success" expand="block" fill="outline">Pedir Novamente</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+    
+    <!-- Pedido 2 -->
+    <ion-item>
+      <h6 style="color:grey;"><br>Dom, 18 abril 2021:</h6>
+    </ion-item>
+
+    <ion-card>
+      <ion-card-header>
+        <img  src="https://lh3.googleusercontent.com/iytWl6zs5jOmCzxtF-bTLIkSr3aLZeP71d1n973rZzhqbd7A8FKZOw6XbaPXYxnHdUDEXUilAWN1Q_HsPV_BVcP18IWhazBLyMNu1V7AdphJrNSW5-9K6eqHrCfABrsa2nwCthJrH93hMUyercnsUFnCNvYo3Qer8_NZlJER8F4LvX8UCmG1xKzm87Qb897_sLUHOBaZmRp2Sgznq-6gXy75XbEwjEC_Lw0qTsFWxqgdYagPnp8HyXOaERzydR2zyN5Ca7DBVsHh6kVQAhz-X7QX-8RdTntkxfwxpTEZsNtzSv8RwhEHPHUEJlTP_RMqwXwdfARftzRZgP_4j76drQBWfaEG1XHxA6F7gXERYuLZwQom5J6xOYK-RR_lPWNosurOGRmY8uYQu2dEHcv9BOqzWjLid25d3SgaX8izZ64yXzjN9jIF5gbIe5VtkpJQZlbXp5DZ41XscyLJ-dXzXABsXzz0Wat1PICQQnRlGtz085C8tOw7WemLGUJSiFyeN__1KXTwzunJQu5tUqOEnH6y6la0I-9Wyzx8qEXsBQXR2vIu-s7fZXt4bGMQtNDbYaOU7utmOebXpTgUuMoaoYTe7rfseb45Bx7speOAOknieEWaUj6Ic8zs7IkfISsmo1uQF4PvB9DRX6DEpRGImAzXCAnZ_p-ExgH5eUxJK6Oqz8wGcGXOFmxUa-1JSj4G9__s6WHp4JAfWZ_EDCoUHkY9=w266-h267-no?authuser=0"
+            style="vertical-align:middle" width="50" height="50">
+        <ion-card-title>Barraca do Zé</ion-card-title>
+        <ion-card-subtitle >Pedido concluido - 1052</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <ion-item>
+          <ion-col>
+            <h5>5 x Tomates</h5>
+          </ion-col>
+          <ion-col style="text-align: right;">
+            <h5>R$ 50,00</h5>
+          </ion-col>
+        </ion-item>
+        <ion-item>
+          <ion-col>
+            <h5>2 x Abacates</h5>
+          </ion-col>
+          <ion-col style="text-align: right;">
+            <h5>R$ 25,00</h5>
+          </ion-col>
+        </ion-item>
+        <ion-item>
+          <ion-col>
+            <h5>1 Pastel Pizza</h5>
+          </ion-col>
+          <ion-col style="text-align: right;">
+            <h5>R$ 6,00</h5>
+          </ion-col>
+        </ion-item>
+        <ion-item>
+          <ion-col>
+            <h5><strong>Total:</strong></h5>
+          </ion-col>
+          <ion-col style="text-align: right;">
+            <h5>R$ 81,00</h5>
+          </ion-col>
+        </ion-item>
+      </ion-card-content>
+      <ion-row>
+        <ion-col>
+          <ion-button color="success" expand="block" fill="outline">Ver Pedido</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="repeat()" color="success" expand="block" fill="outline">Pedir Novamente</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+
+    <ion-item>
+      <h6 style="color:grey;"><br>VER MAIS</h6>
+    </ion-item>
+
+
+  </ion-grid>
+</ion-content>

@@ -1,6 +1,6 @@
 {
   "appId": "io.ionic.starter",
-  "appName": "projetoCDM",
+  "appName": "iFeira",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
