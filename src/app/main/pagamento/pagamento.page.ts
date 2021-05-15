@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PagamentoService } from 'src/app/pagamento.service';
+
 
 @Component({
   selector: 'app-pagamento',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PagamentoPage implements OnInit {
 
-  constructor() { }
+  constructor( private pagamento: PagamentoService ) { }
+
+  public cartao = this.pagamento.allCartao();
 
   ngOnInit() {
   }
+  
 
 }
