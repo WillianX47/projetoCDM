@@ -18,7 +18,11 @@ const routes: Routes = [
   {
     path: 'pedidos',
     loadChildren: () => import('./main/pedidos/pedidos.module').then( m => m.PedidosPageModule)
+  },  {
+    path: 'create-pagamento',
+    loadChildren: () => import('./create-pagamento/create-pagamento.module').then( m => m.CreatePagamentoPageModule)
   },
+
 
 ];
 
