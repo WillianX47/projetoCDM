@@ -17,7 +17,6 @@ export class CreatePagamentoPage implements OnInit {
     name: '',
     venc: '',
     numCartao: '',
-    numCartaoF: '',
     CPF: '',
     CVV: ''
   }

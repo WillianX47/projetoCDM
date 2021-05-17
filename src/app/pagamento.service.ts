@@ -6,7 +6,6 @@ type Cartao = {
   name: string,
   venc: string,
   numCartao: string,
-  numCartaoF: string,
   CPF: string,
   CVV: string
 }
@@ -43,7 +42,6 @@ export class PagamentoService {
     oldCartao.name = cartao.name; 
     oldCartao.venc = cartao.venc;
     oldCartao.numCartao = cartao.numCartao;
-    oldCartao.numCartaoF = cartao.numCartaoF;
     oldCartao.CPF = cartao.CPF;
     oldCartao.CVV = cartao.CVV;
 
