@@ -15,7 +15,7 @@ export class PedidosPage implements OnInit {
   }
 
   repeat() {
-    this.route.navigate(['/main/pagamento']);
+    this.route.navigate(['/main/carrinho']);
   }
 
   ngOnInit() {
