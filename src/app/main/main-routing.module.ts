@@ -33,15 +33,24 @@ const routes: Routes = [
       {
         path: 'pedidos',
         loadChildren: () => import('./pedidos/pedidos.module').then(m => m.PedidosPageModule)
-      }
+      },
+      
+      {
+        path: 'perfil',
+        loadChildren: () => import('./perfil/perfil.module').then(m => m.PerfilPageModule)
+      },
 
-    ]
-  },
+      {
+        path: 'notificacoes',
+        loadChildren: () => import('./notificacoes/notificacoes.module').then( m => m.NotificacoesPageModule)
+      },
+]
+ }
 
 
 
 
-];
+]
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

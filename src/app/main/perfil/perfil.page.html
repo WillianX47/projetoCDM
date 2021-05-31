@@ -1,0 +1,123 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title id="ti">
+      <ion-text color="success">
+        <h1 style="text-align: center;"><strong> Perfil </strong></h1>
+      </ion-text>
+    </ion-title>
+    
+  <ion-grid>
+    <ion-item>
+      
+      
+      <ion-icon style="font-size: 47px;" name="person-circle"></ion-icon>
+
+      <ion-col>
+      <ion-row>
+
+      <ion-text style="color: gray;">Bem vindo!</ion-text>
+
+      </ion-row>
+      <ion-row>
+      <ion-text style="color:antiquewhite;">Fulano Do Santos Alves</ion-text>
+    </ion-row>
+    </ion-col>
+
+    </ion-item>
+  </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+    
+    <ion-item (click)="clickPaga()" style="border-bottom: solid; border-bottom-color:black;border-width: 1px;">
+     
+      <ion-icon style="font-size: 27px;" name="card-outline"></ion-icon>
+
+      <ion-col>
+      <ion-text style="font-size: 15px;"  color="success">Pagamentos</ion-text>
+      </ion-col>
+
+      <ion-col style="text-align: right;">
+        <ion-text color="success">
+          <ion-icon style="margin-left: 10px;" name="chevron-forward-outline"></ion-icon>
+        </ion-text>
+      </ion-col>
+
+    </ion-item>
+    
+
+    <ion-item style="border-bottom: solid; border-bottom-color:black;border-width: 1px;">
+     
+      <ion-icon style="font-size: 27px;" name="location-outline"></ion-icon>
+
+      <ion-col>
+      <ion-text style="font-size: 15px;"  color="success">Endereços</ion-text>
+      </ion-col>
+
+      <ion-col style="text-align: right;">
+        <ion-text color="success">
+          <ion-icon style="margin-left: 10px;" name="chevron-forward-outline"></ion-icon>
+        </ion-text>
+      </ion-col>
+
+    </ion-item>
+  
+
+    <ion-item (click)="clickNoti()" style="border-bottom: solid; border-bottom-color:black;border-width: 1px;">
+     
+      <ion-icon style="font-size: 27px;" name="notifications-outline"></ion-icon>
+
+      <ion-col>
+      <ion-text style="font-size: 15px;"  color="success">Notificações</ion-text>
+      </ion-col>
+
+      <ion-col style="text-align: right;">
+        <ion-text color="success">
+          <ion-icon style="margin-left: 10px;" name="chevron-forward-outline"></ion-icon>
+        </ion-text>
+      </ion-col>
+
+    </ion-item>
+    
+
+    <ion-item style="border-bottom: solid; border-bottom-color:black;border-width: 1px;">
+     
+      <ion-icon style="font-size: 27px;" name="settings-outline"></ion-icon>
+
+      <ion-col>
+      <ion-text style="font-size: 15px;"  color="success">Configurações</ion-text>
+      </ion-col>
+
+      <ion-col style="text-align: right;">
+        <ion-text color="success">
+          <ion-icon style="margin-left: 10px;" name="chevron-forward-outline"></ion-icon>
+        </ion-text>
+      </ion-col>
+
+    </ion-item>
+
+
+    <ion-item (click)="clickLog()" style="border-bottom: solid; border-bottom-color:black;border-width: 1px;">
+     
+      <ion-icon style="font-size: 27px;" name="log-out-outline"></ion-icon>
+
+      <ion-col>
+      <ion-text style="font-size: 15px;"  color="success">Sair</ion-text>
+      </ion-col>
+
+      <ion-col style="text-align: right;">
+        <ion-text color="success">
+          <ion-icon style="margin-left: 10px;" name="chevron-forward-outline"></ion-icon>
+        </ion-text>
+      </ion-col>
+
+    </ion-item>
+
+    
+  
+  </ion-grid>
+
+</ion-content>
