@@ -12,14 +12,6 @@ export class AdicionarProdutosPage implements OnInit {
   ngOnInit() {
   }
 
-  public produto = {
-    nomeProduto: '',
-    cont: 0,
-    precoProduto: 0,
-    quantidadeProduto: null,
-    precoTotal: 0,
-    pedidoTotal: 0
-  }
   
   constructor(
   private produtosService: ProdutosService,
