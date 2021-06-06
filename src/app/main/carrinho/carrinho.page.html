@@ -2,7 +2,7 @@
   <ion-toolbar>
     <ion-title id="ti">
       <ion-text color="success">
-        <h1 style="text-align: center;"><strong> Sacola </strong></h1>
+        <h1 style="text-align: center;"><strong> Carrinho </strong></h1>
       </ion-text>
     </ion-title>
   </ion-toolbar>
@@ -45,32 +45,16 @@
       </ion-text>
     </ion-item>
 
-    <ion-item>
-      <ion-col>
-        <h6>5 x Tomates</h6>
-      </ion-col>
-      <ion-col style="text-align: right;">
-        <h6>R$ 50,00</h6>
-      </ion-col>
-    </ion-item>
+ 
+    
+        <ion-item disabled class="opacidade" *ngFor="let produto of produto">
+          <ion-grid>
+            <p>{{produto.quantidadeProduto}}x {{produto.nomeProduto}}</p>
+          </ion-grid>
+            <p>R$ {{produto.precoTotal.toFixed(2)}}</p>
+        </ion-item>
+      
 
-    <ion-item>
-      <ion-col>
-        <h6>2 x Abacates</h6>
-      </ion-col>
-      <ion-col style="text-align: right;">
-        <h6>R$ 25,00</h6>
-      </ion-col>
-    </ion-item>
-
-    <ion-item>
-      <ion-col>
-        <h6>1 Pastel Pizza</h6>
-      </ion-col>
-      <ion-col style="text-align: right;">
-        <h6>R$ 6,00</h6>
-      </ion-col>
-    </ion-item>
 
     <ion-item>
       <ion-grid style="text-align: center;">
@@ -82,30 +66,24 @@
 
     <ion-item>
       <ion-col>
-        <h5 style="color:thistle">Subtotal</h5>
+        <h5 style="color:white">Taxa de Entrega</h5>
       </ion-col>
       <ion-col style="text-align: right;">
-        <h5 style="color:thistle">R$ 81,00</h5>
+        <h5 style="color:white">Grátis!</h5>
       </ion-col>
     </ion-item>
+    
 
-    <ion-item style="margin-top: -20px;">
+<h6 *ngFor="let produto of produto; let cont = index; let isLast = last">
+    <ion-item *ngIf="isLast == true" disabled class="opacidade">
       <ion-col>
-        <h5 style="color:thistle">Taxa de Entrega</h5>
+        <h5 *ngIf="isLast == true" style="color:white">Total</h5>
       </ion-col>
       <ion-col style="text-align: right;">
-        <h5 style="color:thistle">R$ 10,00</h5>
+        <h5 *ngIf="isLast == true" style="color:white">R$ {{produto.pedidoTotal.toFixed(2)}}</h5>
       </ion-col>
     </ion-item>
-
-    <ion-item>
-      <ion-col>
-        <h5 style="color:thistle">Total</h5>
-      </ion-col>
-      <ion-col style="text-align: right;">
-        <h5 style="color:thistle">R$ 91,00</h5>
-      </ion-col>
-    </ion-item>
+  </h6>
 
   </ion-grid>
 
@@ -119,7 +97,7 @@
     <ion-item>
 
       <ion-icon name="card-outline"></ion-icon>
-      <h6 style="margin-left: 10px;">Visa **** 1234</h6>
+      <h6 style="margin-left: 10px;">Visa •••• 1234</h6>
 
       <ion-col style="text-align: right;">
         <ion-text color="success">
