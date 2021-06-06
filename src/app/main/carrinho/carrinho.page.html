@@ -54,15 +54,21 @@
             <p>R$ {{produto.precoTotal.toFixed(2)}}</p>
         </ion-item>
       
+        <ion-item >
+          <ion-grid>
+            <ion-button  (click)="adicionarMais()" style="text-align: right;" size="medium" color="success" expand="full">
+              Adicionar mais itens
+            </ion-button>
+          </ion-grid>
+        </ion-item>
 
-
-    <ion-item>
-      <ion-grid style="text-align: center;">
-        <ion-text style="font-size:medium;" color="success">
-          Adicionar mais items
-        </ion-text>
-      </ion-grid>
-    </ion-item>
+        <ion-item >
+          <ion-grid>
+            <ion-button  (click)="removerItens()" block style="text-align: right;" size="medium" color="success" expand="full">
+              Remover produtos do carrinho
+            </ion-button>
+          </ion-grid>
+        </ion-item>
 
     <ion-item>
       <ion-col>
@@ -106,11 +112,10 @@
       </ion-col>
     </ion-item>
 
-
-    <ion-button style="margin-top: 8px;" size="medium" color="success" expand="full" fill="outline">Fazer Pedido
+    <ion-button (click)="pedidoConfirmado()" style="margin-top: 8px;" size="medium" color="success" expand="full" fill="outline">
+      Fazer Pedido
     </ion-button>
-
-
+    
   </ion-grid>
 
 </ion-content>

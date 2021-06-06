@@ -13,14 +13,11 @@ export class AdicionarProdutosPage implements OnInit {
   }
 
   
-  constructor(
-  private produtosService: ProdutosService,
-  private navCtrl1: NavController) { }
+  constructor() { }
 
 
   onClick() {
-    this.produtosService.addProduto(this.produto);
-    this.navCtrl1.back();
+
   }
 
 
