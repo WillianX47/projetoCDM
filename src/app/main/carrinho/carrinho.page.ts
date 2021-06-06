@@ -4,6 +4,7 @@ import { ProdutosService } from 'src/app/produtos.service';
 import { Storage } from '@ionic/storage-angular';
 import {AlertController} from '@ionic/angular';
 import {ToastController} from '@ionic/angular';
+import { EnderecoService } from 'src/app/endereco.service';
 
 
 @Component({
@@ -13,13 +14,17 @@ import {ToastController} from '@ionic/angular';
 })
 export class CarrinhoPage implements OnInit {
   
-  constructor(private route: Router, private item: ProdutosService, private storage: Storage, public alertController: AlertController,
+  constructor(private route: Router, private enderecoitem: EnderecoService, private item: ProdutosService, private storage: Storage, public alertController: AlertController,
     public toastController: ToastController) {}
   
 
 
   public click() {
     this.route.navigate(['/main/pagamento']); 
+  }
+
+  public clickEnde() {
+    this.route.navigate(['/main/endereco']);
   }
 
   public adicionarMais() {
@@ -32,6 +37,8 @@ export class CarrinhoPage implements OnInit {
   }
 
   public produto = this.item.allProduto();
+
+  public endereco = this.enderecoitem.allEndereco();
 
   public async pedidoConfirmado() {
     const alert = await this.alertController.create({

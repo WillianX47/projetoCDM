@@ -44,8 +44,15 @@ const routes: Routes = [
         path: 'notificacoes',
         loadChildren: () => import('./notificacoes/notificacoes.module').then( m => m.NotificacoesPageModule)
       },
+
+      {
+        path: 'endereco',
+        loadChildren: () => import('./endereco/endereco.module').then( m => m.EnderecoPageModule)
+      },
 ]
- }
+ },
+  
+
 
 
 

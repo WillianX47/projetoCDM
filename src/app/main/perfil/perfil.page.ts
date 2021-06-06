@@ -22,6 +22,10 @@ export class PerfilPage implements OnInit {
     this.route.navigate(['/main/notificacoes']);
   }
 
+  public clickEnde() {
+    this.route.navigate(['/main/endereco']);
+  }
+
   ngOnInit() {
     
   }

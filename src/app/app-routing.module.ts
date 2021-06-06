@@ -30,6 +30,10 @@ const routes: Routes = [
     path: 'adicionar-produtos',
     loadChildren: () => import('./adicionar-produtos/adicionar-produtos.module').then( m => m.AdicionarProdutosPageModule)
   },
+  {
+    path: 'create-endereco',
+    loadChildren: () => import('./create-endereco/create-endereco.module').then( m => m.CreateEnderecoPageModule)
+  },
 
 
 ];

@@ -11,6 +11,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  
   <ion-grid style="margin-top: 25px;">
     <ion-item *ngFor="let cartao of cartao" [routerLink]="['/edit', cartao.numCartao, cartao.name]">
       <ion-icon style="margin-left: 1px; font-size:x-large;" name="card-outline"></ion-icon>
