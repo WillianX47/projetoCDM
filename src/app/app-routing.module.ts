@@ -26,6 +26,10 @@ const routes: Routes = [
     path: 'create-pagamento',
     loadChildren: () => import('./create-pagamento/create-pagamento.module').then( m => m.CreatePagamentoPageModule)
   },
+  {
+    path: 'adicionar-produtos',
+    loadChildren: () => import('./adicionar-produtos/adicionar-produtos.module').then( m => m.AdicionarProdutosPageModule)
+  },
 
 
 ];

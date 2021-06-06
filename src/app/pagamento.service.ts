@@ -17,7 +17,7 @@ type Cartao = {
 export class PagamentoService {
   
   constructor(private storage: Storage) {
-    //this.storage.clear()
+    this.storage.clear();
     this.loadFromStorage();
   }
   private cartao: Cartao[] = [];

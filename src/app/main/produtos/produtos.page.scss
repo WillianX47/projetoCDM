@@ -1,0 +1,35 @@
+
+.botao {
+    margin-top: 1.5%;
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #1b1b1b;
+    padding: 15px;
+    font-size: 17px;
+    transition-duration: 0.2s;
+    position: relative;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: left;
+  }
+  .botao:after {
+    content: "";
+    background: gray;
+    display: block;
+    position: absolute;
+    padding-top: 200%;
+    padding-left: 200%;
+    margin-left: -20px!important;
+    margin-top: -150%;
+    opacity: 0;
+    transition: all 0.5s
+  }
+  .botao:active:after {
+    padding: 1;
+    margin: 1;
+    opacity: 0.5;
+    transition: 0.1s;
+  }
+  

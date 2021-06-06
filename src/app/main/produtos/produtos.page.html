@@ -1,11 +1,18 @@
 <ion-header>
+
   <ion-toolbar>
-    <ion-title color="success">
-      <h1>Barraca do Zé</h1>
-    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button style="background-color: #1e1e1e;" color= "success" defaultHref="/main/inicio"></ion-back-button>
+    </ion-buttons>
+      <ion-item>
+        <ion-grid style="margin-left: 50px;">
+          <ion-text color="success">
+            <h4><strong>Barraca do Zé:</strong></h4>
+          </ion-text>
+          </ion-grid>
+      </ion-item>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
 
   <ion-item color="success">
@@ -13,119 +20,93 @@
   </ion-item>
 
   <ion-item>
-    <ion-grid>
-      <ion-row>
-        <h5>Abacates (1 u)</h5>
-      </ion-row>
-      <h6>R$ 4,50</h6>
-    </ion-grid>
+  <ion-label position="floating">Abacate (1 un) - R$ 4,49 </ion-label>
+  <ion-input type="number" [(ngModel)]="produto.quantidadeProduto"></ion-input>
   </ion-item>
+  <ion-button (click)="addAbacate()" style="margin-bottom: 5%;" color="success" expand="block" fill="outline">
+    Adicionar ao Carrinho
+  </ion-button>
+  
+  <ion-item>
+    <ion-label position="floating">Banana (1 cacho) - R$ 4,99</ion-label>
+    <ion-input type="number" [(ngModel)]="produto.quantidadeProduto"></ion-input>
+  </ion-item>
+  <ion-button (click)="addBanana()" style="margin-bottom: 5%;" color="success" expand="block" fill="outline">
+    Adicionar ao Carrinho
+  </ion-button>
+  
+  <ion-item>
+    <ion-label position="floating">Uva (500g) - R$ 6,89</ion-label>
+    <ion-input type="number" [(ngModel)]="produto.quantidadeProduto"></ion-input>
+  </ion-item>
+  <ion-button (click)="addUva()" style="margin-bottom: 5%;" color="success" expand="block" fill="outline">
+    Adicionar ao Carrinho
+  </ion-button>
+
+  
+  <ion-item>
+    <ion-label position="floating">Laranja (1kg) - R$ 1,75</ion-label>
+    <ion-input type="number" [(ngModel)]="produto.quantidadeProduto"></ion-input>
+  </ion-item>
+  <ion-button (click)="addLaranja()" style="margin-bottom: 5%;" color="success" expand="block" fill="outline">
+    Adicionar ao Carrinho
+  </ion-button>
 
   <ion-item>
-    <ion-grid>
-      <ion-row>
-        <h5>Banana (1 cacho)</h5>
-      </ion-row>
-      <ion-row>
-        <h6>R$ 4,99</h6>
-      </ion-row>
-    </ion-grid>
+    <ion-label position="floating">Maçã (1kg) - R$ 7,89</ion-label>
+    <ion-input type="number" [(ngModel)]="produto.quantidadeProduto"></ion-input>
   </ion-item>
-
-  <ion-item>
-    <ion-grid>
-      <ion-row>
-        <h5>Uva (500 g)</h5>
-      </ion-row>
-      <ion-row>
-        <h6>R$ 10,79</h6>
-      </ion-row>
-    </ion-grid>
-  </ion-item>
-
-  <ion-item>
-    <ion-grid>
-      <ion-row>
-        <h5>Laranja (1 kg)</h5>
-      </ion-row>
-      <ion-row>
-        <h6>R$ 1,75</h6>
-      </ion-row>
-    </ion-grid>
-  </ion-item>
-
-  <ion-item>
-    <ion-grid>
-      <ion-row>
-        <h5>Maçã (1 kg)</h5>
-      </ion-row>
-      <ion-row>
-        <h6>R$ 3,22</h6>
-      </ion-row>
-    </ion-grid>
-  </ion-item>
+  <ion-button (click)="addMaca()" style="margin-bottom: 5%;" color="success" expand="block" fill="outline">
+    Adicionar ao Carrinho
+  </ion-button>
 
   <ion-item color="success">
     <h1>Verduras</h1>
   </ion-item>
 
   <ion-item>
-    <ion-grid>
-      <ion-row>
-        <h5>Tomates (100 g)</h5>
-      </ion-row>
-      <ion-row>
-        <h6>R$ 3,99</h6>
-      </ion-row>
-    </ion-grid>
+    <ion-label position="floating">Tomate (100g) - R$ 4,99</ion-label>
+    <ion-input type="number" [(ngModel)]="produto.quantidadeProduto"></ion-input>
   </ion-item>
+  <ion-button (click)="addTomate()" style="margin-bottom: 5%;" color="success" expand="block" fill="outline">
+    Adicionar ao Carrinho
+  </ion-button>
 
   <ion-item>
-    <ion-grid>
-      <ion-row>
-        <h5>Alface (1 maço)</h5>
-      </ion-row>
-      <ion-row>
-        <h6>R$ 1,72</h6>
-      </ion-row>
-    </ion-grid>
+    <ion-label position="floating">Alface (1 maço) - R$ 2,99</ion-label>
+    <ion-input type="number" [(ngModel)]="produto.quantidadeProduto"></ion-input>
   </ion-item>
+  <ion-button (click)="addAlface()" style="margin-bottom: 5%;" color="success" expand="block" fill="outline">
+    Adicionar ao Carrinho
+  </ion-button>
 
   <ion-item color="success">
     <h1>Pastéis</h1>
   </ion-item>
 
   <ion-item>
-    <ion-grid>
-      <ion-row>
-        <h5>Pastel de Queijo (1 u)</h5>
-      </ion-row>
-      <ion-row>
-        <h6>R$ 6,00</h6>
-      </ion-row>
-    </ion-grid>
+    <ion-label position="floating">Pastel de Queijo - R$ 5,99</ion-label>
+    <ion-input type="number" [(ngModel)]="produto.quantidadeProduto"></ion-input>
   </ion-item>
+  <ion-button (click)="addPastelQ()" style="margin-bottom: 5%;" color="success" expand="block" fill="outline">
+    Adicionar ao Carrinho
+  </ion-button>
+  
+  <ion-item>
+    <ion-label position="floating">Pastel de Carne - R$ 5,99</ion-label>
+    <ion-input type="number" [(ngModel)]="produto.quantidadeProduto"></ion-input>
+  </ion-item>
+  <ion-button (click)="addPastelC()" style="margin-bottom: 5%;" color="success" expand="block" fill="outline">
+    Adicionar ao Carrinho
+  </ion-button>
 
   <ion-item>
-    <ion-grid>
-      <ion-row>
-        <h5>Pastel de Pizza (1 u)</h5>
-      </ion-row>
-      <ion-row>
-        <h6>R$ 6,00</h6>
-      </ion-row>
-    </ion-grid>
+    <ion-label position="floating">Pastel de Pizza - R$ 5,99</ion-label>
+    <ion-input type="number" [(ngModel)]="produto.quantidadeProduto"></ion-input>
   </ion-item>
-
-  <ion-item>
-    <ion-grid>
-      <ion-row>
-        <h5>Pastel de Carne (1 u)</h5>
-      </ion-row>
-      <ion-row>
-        <h6>R$ 6,00</h6>
-      </ion-row>
-    </ion-grid>
-  </ion-item>
-
+  <ion-button (click)="addPastelP()" style="margin-bottom: 5%;" color="success" expand="block" fill="outline">
+    Adicionar ao Carrinho
+  </ion-button>
+  
 </ion-content>
+

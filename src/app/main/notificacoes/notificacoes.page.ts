@@ -13,3 +13,4 @@ export class NotificacoesPage implements OnInit {
   }
 
 }
+
