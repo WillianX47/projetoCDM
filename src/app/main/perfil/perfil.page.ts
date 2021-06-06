@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ApiService } from 'src/app/api.service';
+
 
 @Component({
   selector: 'app-perfil',
@@ -8,7 +10,10 @@ import { Router } from '@angular/router';
 })
 export class PerfilPage implements OnInit {
 
-  constructor(private route: Router) { }
+  constructor(private route: Router, private communication: ApiService) { }
+
+  public userList = [];
+
 
   public clickLog() {
     this.route.navigate(['/home']);
@@ -27,7 +32,11 @@ export class PerfilPage implements OnInit {
   }
 
   ngOnInit() {
-    
+    this.communication.fetchUserList().then(
+      () => {
+        this.userList = this.communication.userList;
+      }
+    );
   }
 
 }

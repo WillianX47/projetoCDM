@@ -13,14 +13,14 @@
     <img width=75 height=75 src="https://image.flaticon.com/icons/png/512/1202/1202078.png" alt="">
   </ion-grid>
   <br>
-  <ion-item>
+  <ion-item *ngFor="let user of userList.slice(0, 1);">
     <ion-icon name="person-outline"></ion-icon>
-    <ion-input></ion-input>
+    <ion-input>&nbsp;{{user.email}}</ion-input>
   </ion-item>
   <br>
   <ion-item>
     <ion-icon name="key-outline"></ion-icon>
-    <ion-input></ion-input>
+    <ion-input>&nbsp;&nbsp;••••••••</ion-input>
   </ion-item>
   <br>
   <ion-button color="success" expand="full" fill="outline" routerLink="/main/inicio">Login</ion-button>

@@ -15,12 +15,17 @@
       <ion-col>
       <ion-row>
 
-      <ion-text style="color: gray;">Bem vindo!</ion-text>
+      <ion-text style="margin-right: +20px;" style="color: gray;">&nbsp;&nbsp;&nbsp;Bem vindo!</ion-text>
 
       </ion-row>
       <ion-row>
-      <ion-text style="color:antiquewhite;">Fulano Do Santos Alves</ion-text>
-    </ion-row>
+        <ion-item *ngFor="let user of userList.slice(0, 1);">
+          <ion-label>
+            <h4>{{user.name}} ( {{user.username}} )</h4>
+          </ion-label>
+        </ion-item>
+      </ion-row>
+      
     </ion-col>
 
     </ion-item>
