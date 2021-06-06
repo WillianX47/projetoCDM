@@ -1,3 +1,4 @@
+import { PagamentoService } from 'src/app/pagamento.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProdutosService } from 'src/app/produtos.service';
@@ -14,7 +15,7 @@ import { EnderecoService } from 'src/app/endereco.service';
 })
 export class CarrinhoPage implements OnInit {
   
-  constructor(private route: Router, private enderecoitem: EnderecoService, private item: ProdutosService, private storage: Storage, public alertController: AlertController,
+  constructor(private route: Router, private cartaoitem: PagamentoService,private enderecoitem: EnderecoService, private item: ProdutosService, private storage: Storage, public alertController: AlertController,
     public toastController: ToastController) {}
   
 
@@ -39,6 +40,8 @@ export class CarrinhoPage implements OnInit {
   public produto = this.item.allProduto();
 
   public endereco = this.enderecoitem.allEndereco();
+
+  public cartao = this.cartaoitem.allCartao();
 
   public async pedidoConfirmado() {
     const alert = await this.alertController.create({

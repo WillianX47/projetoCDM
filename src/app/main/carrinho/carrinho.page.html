@@ -116,11 +116,14 @@
     <ion-item>
 
       <ion-icon name="card-outline"></ion-icon>
-      <h6 style="margin-left: 10px;">Visa •••• 1234</h6>
+      <h6 *ngFor="let cartao of cartao" style="margin-left: 10px;">
+          <p>&nbsp;&nbsp;&nbsp;{{cartao.name}}</p>
+          <p>&nbsp;&nbsp;&nbsp;•••• {{cartao.numCartao.substring(15)}}</p>
+      </h6>
 
       <ion-col style="text-align: right;">
         <ion-text color="success">
-          <ion-button (click)="click()" size="small" color="success">  trocar </ion-button>
+          <ion-button (click)="click()" size="small" color="success">  Trocar </ion-button>
         </ion-text>
       </ion-col>
     </ion-item>
