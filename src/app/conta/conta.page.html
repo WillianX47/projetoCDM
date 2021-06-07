@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button style="background-color: #1e1e1e;" color= "success" defaultHref="/main/perfil"></ion-back-button>
+    </ion-buttons>
+    <ion-item>
+      <ion-grid style="margin-left: 40px;">
+        <ion-text color="success">
+          <h4><strong>MINHA CONTA</strong></h4>
+        </ion-text>
+      </ion-grid>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <ion-grid style="--ion-item-background:transperent;">
+    <ion-item>
+      <ion-row>
+        
+        <ion-input disabled>
+          <h6>Nome</h6>
+        </ion-input>
+
+        <ion-input disabled *ngFor="let user of userList.slice(0, 1);" style="margin-left : 86px;">
+          <h6>{{user.name}}</h6>
+        </ion-input>
+
+      </ion-row>
+
+    </ion-item>
+
+    <ion-item>
+      <ion-row>
+        
+        <ion-input disabled>
+          <h6>Email</h6>
+        </ion-input>
+
+        <ion-input disabled *ngFor="let user of userList.slice(0, 1);" style="margin-left : 86px;">
+          <h6>{{user.email}}</h6>
+        </ion-input>
+
+      </ion-row>
+
+    </ion-item>
+
+    <ion-item>
+
+      <ion-input disabled>
+        <h6>Usuário</h6>
+      </ion-input>
+
+
+      <ion-input disabled *ngFor="let user of userList.slice(0, 1);" style="margin-left : 227px;">
+        <h6>{{user.username}}</h6>
+      </ion-input>
+
+    </ion-item>
+
+    <ion-item>
+
+      <ion-input disabled>
+        <h6>Telefone</h6>
+      </ion-input>
+
+
+      <ion-input disabled *ngFor="let user of userList.slice(0, 1);" style="margin-left : -35px;">
+        <h6>{{user.phone}}</h6>
+      </ion-input>
+
+    </ion-item>
+
+  </ion-grid>
+
+  <ion-grid class="footer">
+    <img width=200 height=200 src="https://image.flaticon.com/icons/png/512/1202/1202078.png" alt="">
+  </ion-grid>
+  
+
+</ion-content>

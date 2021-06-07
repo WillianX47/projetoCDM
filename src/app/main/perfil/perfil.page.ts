@@ -15,6 +15,10 @@ export class PerfilPage implements OnInit {
   public userList = [];
 
 
+  public clickIcon(){
+    this.route.navigate(['/conta']);
+  }
+
   public clickLog() {
     this.route.navigate(['/home']);
   }

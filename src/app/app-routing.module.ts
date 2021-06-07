@@ -34,7 +34,11 @@ const routes: Routes = [
   {
     path: 'create-endereco',
     loadChildren: () => import('./create-endereco/create-endereco.module').then( m => m.CreateEnderecoPageModule)
+  },  {
+    path: 'conta',
+    loadChildren: () => import('./conta/conta.module').then( m => m.ContaPageModule)
   }
+
 ];
 
 @NgModule({
