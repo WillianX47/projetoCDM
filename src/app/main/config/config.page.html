@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button style="background-color: #1e1e1e;" color= "success" defaultHref="/main/perfil"></ion-back-button>
+    </ion-buttons>
+    <ion-item>
+      <ion-grid style="margin-left: 40px;">
+        <ion-text color="success">
+          <h4><strong>Configurações:</strong></h4>
+        </ion-text>
+      </ion-grid>
+    </ion-item>
+
+    <style>
+      .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color:#282828;
+        color: white;
+        text-align: center;
+        font-size: x-small;
+        color:#686868;
+      }
+      </style>
+      
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid style="--ion-item-background:transperent;">
+    <ion-item>
+      <ion-row>
+        
+        <ion-col>
+          <p>Versão</p>
+        </ion-col>
+
+        <ion-col style="margin-left: 200px;">
+          <p>1.00</p>
+        </ion-col>
+
+      </ion-row>
+
+    </ion-item>
+
+    <ion-item (click)="clickPed()">
+      <ion-row>
+        
+        <ion-col>
+          <p>Historico</p>
+        </ion-col>
+
+        <ion-col  style="margin-left: 200px; margin-top: 17px;">
+          <ion-icon  color= "success" name="chevron-forward-outline"></ion-icon>
+        </ion-col>
+
+      </ion-row>
+
+    </ion-item>
+
+    <ion-item>
+      <ion-row>
+        <ion-col>
+          <p>Termos de Uso</p>
+        </ion-col>
+      </ion-row>
+
+    </ion-item>
+
+    <ion-item (click)="clickLog()">
+      <ion-row>
+        
+        <ion-col>
+          <p>Sair</p>
+        </ion-col>
+
+        <ion-col  style="margin-left: 235px; margin-top: 17px;">
+          <ion-icon (click)="clickPed()" color= "success" name="chevron-forward-outline"></ion-icon>
+        </ion-col>
+
+      </ion-row>
+
+    </ion-item>
+
+  </ion-grid>
+
+  <div class="footer">
+    <p>iFeira - Versão 1.00.0</p>
+    <p>2021 Todos os direitos reservados. iFeira®</p>
+  </div>
+
+
+  
+
+</ion-content>

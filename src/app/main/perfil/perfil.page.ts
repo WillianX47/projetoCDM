@@ -31,6 +31,10 @@ export class PerfilPage implements OnInit {
     this.route.navigate(['/main/endereco']);
   }
 
+  public clickConfig() {
+    this.route.navigate(['/main/config']);
+  }
+
   ngOnInit() {
     this.communication.fetchUserList().then(
       () => {

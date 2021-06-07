@@ -88,7 +88,7 @@
     </ion-item>
     
 
-    <ion-item style="border-bottom: solid; border-bottom-color:black;border-width: 1px;">
+    <ion-item (click)="clickConfig()" style="border-bottom: solid; border-bottom-color:black;border-width: 1px;">
      
       <ion-icon style="font-size: 27px;" name="settings-outline"></ion-icon>
 
@@ -103,25 +103,6 @@
       </ion-col>
 
     </ion-item>
-
-
-    <ion-item (click)="clickLog()" style="border-bottom: solid; border-bottom-color:black;border-width: 1px;">
-     
-      <ion-icon style="font-size: 27px;" name="log-out-outline"></ion-icon>
-
-      <ion-col>
-      <ion-text style="font-size: 15px;"  color="success">Sair</ion-text>
-      </ion-col>
-
-      <ion-col style="text-align: right;">
-        <ion-text color="success">
-          <ion-icon style="margin-left: 10px;" name="chevron-forward-outline"></ion-icon>
-        </ion-text>
-      </ion-col>
-
-    </ion-item>
-
-    
   
   </ion-grid>
 

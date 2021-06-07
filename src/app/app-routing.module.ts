@@ -18,7 +18,8 @@ const routes: Routes = [
   {
     path: 'pedidos',
     loadChildren: () => import('./main/pedidos/pedidos.module').then( m => m.PedidosPageModule)
-  },  {
+  },
+  {
     path: 'create-pagamento',
     loadChildren: () => import('./create-pagamento/create-pagamento.module').then( m => m.CreatePagamentoPageModule)
   },
@@ -33,9 +34,7 @@ const routes: Routes = [
   {
     path: 'create-endereco',
     loadChildren: () => import('./create-endereco/create-endereco.module').then( m => m.CreateEnderecoPageModule)
-  },
-
-
+  }
 ];
 
 @NgModule({

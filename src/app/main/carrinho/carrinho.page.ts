@@ -14,10 +14,10 @@ import { EnderecoService } from 'src/app/endereco.service';
   styleUrls: ['./carrinho.page.scss'],
 })
 export class CarrinhoPage implements OnInit {
-  
-  constructor(private route: Router, private cartaoitem: PagamentoService,private enderecoitem: EnderecoService, private item: ProdutosService, private storage: Storage, public alertController: AlertController,
+
+  constructor(private route: Router, private cartaoitem: PagamentoService,private enderecoitem: EnderecoService, 
+    private item: ProdutosService, private storage: Storage, public alertController: AlertController,
     public toastController: ToastController) {}
-  
 
 
   public click() {
@@ -32,11 +32,6 @@ export class CarrinhoPage implements OnInit {
     this.route.navigate(['/main/produtos']); 
   }
 
-  public removerItens() {
-    this.storage.clear()
-    this.route.navigate(['/main/produtos']);
-  }
-
   public produto = this.item.allProduto();
 
   public endereco = this.enderecoitem.allEndereco();
@@ -45,11 +40,11 @@ export class CarrinhoPage implements OnInit {
 
   public async pedidoConfirmado() {
     const alert = await this.alertController.create({
-      header: 'Seu Pedido Foi finalizado',
+      header: 'Seu pedido foi enviado e será entregue.',
       message: 'Aproveite!!!!!',
       buttons: [
         {
-          text:  'ok',
+          text:  'Ok',
         }
       ] 
     }); this.route.navigate(['/main/inicio']); 

@@ -17,14 +17,14 @@
 <ion-content>
 
   <ion-grid style="margin-top: 25px;">
-    <ion-item style="margin-top: 5px;" *ngFor="let endereco of endereco" [routerLink]="['/edit', endereco.log, endereco.numCasa, endereco.comp]">
-    
+    <ion-item style="margin-top: 5px;" *ngFor="let endereco of endereco">
+
       <ion-icon style="margin-left: 1px; font-size:x-large;" name="location-outline"></ion-icon>
-      
+
       <ion-grid>
         <p>{{endereco.log}} , {{endereco.numCasa}} , {{endereco.comp}}</p>
       </ion-grid> 
-    
+
     </ion-item>
   </ion-grid>
 

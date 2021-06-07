@@ -12,40 +12,36 @@
 
   <ion-grid style="margin-left: 10px; margin-right:10px;margin-bottom: 5px;">
     <ion-item style="margin-top: 13px; margin-bottom: -11px;">
-      <ion-text color="success" >
-        <h5 ><strong>Entrega:</strong></h5>
+      <ion-text color="success">
+        <h5><strong>Entrega:</strong></h5>
       </ion-text>
     </ion-item>
     <ion-item>
-      <ion-text style="color:grey; font-size: small;"><h6>Entregar em:</h6></ion-text>
+      <ion-text style="color:grey; font-size: small;">
+        <h6>Entregar em:</h6>
+      </ion-text>
     </ion-item>
 
 
- <h6 *ngFor="let endereco of endereco; let cont = index; let isLast = last" style="margin-top: -10px;">
-   <ion-item *ngIf="isLast == true">
+    <h6 *ngFor="let endereco of endereco; let cont = index; let isLast = last" style="margin-top: -10px;">
+      <ion-item *ngIf="isLast == true">
 
-      <ion-icon style="margin-left: -1px;" name="navigate-outline"></ion-icon>
-      
-       
+        <ion-icon style="margin-left: -1px;" name="navigate-outline"></ion-icon>
+
+
         <p style="margin-left: 5px;">{{endereco.log}} , {{endereco.numCasa}} , {{endereco.comp}}</p>
-      
 
-   
-      <!--      <h6 style="margin-left: 5px;" >R. Ibituruna, 416 - Vila da Saude - Apto 103</h6
-      -->
- 
-      
-      <ion-col style="text-align: right;">
-        <ion-text color="success">
-          <ion-icon (click)="clickEnde()" style="margin-left: 10px;" name="chevron-forward-outline"></ion-icon>
-        </ion-text>
-      </ion-col>
-    </ion-item>
- </h6>
+      </ion-item>
+    </h6>
+
+
+
+      <ion-button (click)="clickEnde()" size="medium" color="success" expand="full" fill="outline">
+        Alterar Endereço
+      </ion-button>
     
 
-
-    <ion-item>
+    <ion-item style="margin-top: 8px;">
       <ion-icon name="alarm-outline"></ion-icon>
       <h6 style="margin-left: 5px;">10 - 15 mins</h6>
     </ion-item>
@@ -54,34 +50,26 @@
   <ion-grid style="margin-left: 10px; margin-right:10px;">
     <ion-item>
       <ion-text color="success">
-        <h5><strong>Produtos :</strong></h5>
+        <h5><strong>Produtos:</strong></h5>
       </ion-text>
     </ion-item>
 
- 
-    
-        <ion-item disabled class="opacidade" *ngFor="let produto of produto">
-          <ion-grid>
-            <p>{{produto.quantidadeProduto}}x {{produto.nomeProduto}}</p>
-          </ion-grid>
-            <p>R$ {{produto.precoTotal.toFixed(2)}}</p>
-        </ion-item>
-      
-        <ion-item >
-          <ion-grid>
-            <ion-button  (click)="adicionarMais()" style="text-align: right;" size="medium" color="success" expand="full">
-              Adicionar mais itens
-            </ion-button>
-          </ion-grid>
-        </ion-item>
 
-        <ion-item >
-          <ion-grid>
-            <ion-button  (click)="removerItens()" block style="text-align: right;" size="medium" color="success" expand="full">
-              Remover produtos do carrinho
-            </ion-button>
-          </ion-grid>
-        </ion-item>
+
+    <ion-item *ngFor="let produto of produto">
+      <ion-grid>
+        <p>{{produto.quantidadeProduto}}x {{produto.nomeProduto}}</p>
+      </ion-grid>
+      <p>R$ {{produto.precoTotal.toFixed(2)}}</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-grid>
+        <ion-button (click)="adicionarMais()" style="text-align: right;" size="medium" color="success" expand="full" fill="outline">
+          Adicionar mais itens
+        </ion-button>
+      </ion-grid>
+    </ion-item>
 
     <ion-item>
       <ion-col>
@@ -91,25 +79,25 @@
         <h5 style="color:white">Grátis!</h5>
       </ion-col>
     </ion-item>
-    
 
-<h6 *ngFor="let produto of produto; let cont = index; let isLast = last">
-    <ion-item *ngIf="isLast == true" disabled class="opacidade">
-      <ion-col>
-        <h5 *ngIf="isLast == true" style="color:white">Total</h5>
-      </ion-col>
-      <ion-col style="text-align: right;">
-        <h5 *ngIf="isLast == true" style="color:white">R$ {{produto.pedidoTotal.toFixed(2)}}</h5>
-      </ion-col>
-    </ion-item>
-  </h6>
+
+    <h6 *ngFor="let produto of produto; let cont = index; let isLast = last">
+      <ion-item *ngIf="isLast == true">
+        <ion-col>
+          <h5 *ngIf="isLast == true" style="color:white">Total</h5>
+        </ion-col>
+        <ion-col style="text-align: right;">
+          <h5 *ngIf="isLast == true" style="color:white">R$ {{produto.pedidoTotal.toFixed(2)}}</h5>
+        </ion-col>
+      </ion-item>
+    </h6>
 
   </ion-grid>
 
   <ion-grid style="margin-left: 10px; margin-right:10px;">
     <ion-item>
       <ion-text color="success">
-        <h5><strong>Pagamento :</strong></h5>
+        <h5><strong>Pagamento:</strong></h5>
       </ion-text>
     </ion-item>
 
@@ -117,21 +105,22 @@
 
       <ion-icon name="card-outline"></ion-icon>
       <h6 *ngFor="let cartao of cartao" style="margin-left: 10px;">
-          <p>&nbsp;&nbsp;&nbsp;{{cartao.name}}</p>
-          <p>&nbsp;&nbsp;&nbsp;•••• {{cartao.numCartao.substring(15)}}</p>
+        <p>&nbsp;&nbsp;&nbsp;{{cartao.name}}</p>
+        <p>&nbsp;&nbsp;&nbsp;•••• {{cartao.numCartao.substring(15)}}</p>
       </h6>
 
       <ion-col style="text-align: right;">
         <ion-text color="success">
-          <ion-button (click)="click()" size="small" color="success">  Trocar </ion-button>
+          <ion-button (click)="click()" size="small" color="success"> Trocar </ion-button>
         </ion-text>
       </ion-col>
     </ion-item>
 
-    <ion-button (click)="pedidoConfirmado()" style="margin-top: 8px;" size="medium" color="success" expand="full" fill="outline">
+    <ion-button (click)="pedidoConfirmado()" style="margin-top: 8px;" size="medium" color="success" expand="full"
+      fill="outline">
       Fazer Pedido
     </ion-button>
-    
+
   </ion-grid>
 
 </ion-content>
