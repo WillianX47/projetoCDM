@@ -35,6 +35,7 @@
     <ion-input type="text" [(ngModel)]="endereco.comp"></ion-input>
   </ion-item>
   
-  <ion-button (click)="onClick()" color="success" expand="block" fill="outline">Salvar</ion-button>
+  <ion-button [disabled]="!endereco.comp || !endereco.cep || !endereco.numCasa || !endereco.log"
+   (click)="onClick()" color="success" expand="block" fill="outline">Salvar</ion-button>
 
 </ion-content>

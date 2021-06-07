@@ -40,6 +40,7 @@
     <ion-input type="text" [(ngModel)]="cartao.CPF"></ion-input>
   </ion-item>
   <br>
-  <ion-button (click)="onClick()" color="success" expand="block" fill="outline">Salvar</ion-button>
+  <ion-button [disabled]="!cartao.CPF || !cartao.CVV || !cartao.venc || !cartao.numCartao || !cartao.name"
+   (click)="onClick()" color="success" expand="block" fill="outline">Salvar</ion-button>
 
 </ion-content>
