@@ -1,10 +1,10 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button color= "success" defaultHref="home"></ion-back-button>
+      <ion-back-button color="success" defaultHref="home"></ion-back-button>
     </ion-buttons>
     <ion-item>
-      <ion-grid >
+      <ion-grid>
         <ion-text color="success">
           <h4><strong>Cadastrar Endereços:</strong></h4>
         </ion-text>
@@ -19,23 +19,23 @@
     <ion-label position="floating">Rua: </ion-label>
     <ion-input type="text" [(ngModel)]="endereco.log"></ion-input>
   </ion-item>
-  
+
   <ion-item style="margin-top: 5px;">
     <ion-label position="floating">Numero:</ion-label>
     <ion-input type="text" [(ngModel)]="endereco.numCasa"></ion-input>
   </ion-item>
-  
+
   <ion-item style="margin-top: 5px;">
     <ion-label position="floating">CEP:</ion-label>
     <ion-input type="text" [(ngModel)]="endereco.cep"></ion-input>
   </ion-item>
-  
+
   <ion-item style="margin-top: 5px;">
     <ion-label position="floating">Complemento:</ion-label>
     <ion-input type="text" [(ngModel)]="endereco.comp"></ion-input>
   </ion-item>
-  
-  <ion-button [disabled]="!endereco.comp || !endereco.cep || !endereco.numCasa || !endereco.log"
-   (click)="onClick()" color="success" expand="block" fill="outline">Salvar</ion-button>
+
+  <ion-button [disabled]="!endereco.comp || !endereco.cep || !endereco.numCasa || !endereco.log" (click)="onClick()"
+    color="success" expand="block" fill="outline">Salvar</ion-button>
 
 </ion-content>

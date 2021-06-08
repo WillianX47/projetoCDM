@@ -9,12 +9,12 @@ import { PagamentoService } from 'src/app/pagamento.service';
 })
 export class PagamentoPage implements OnInit {
 
-  constructor( private pagamento: PagamentoService ) { }
+  constructor(private pagamento: PagamentoService) { }
 
   public cartao = this.pagamento.allCartao();
 
   ngOnInit() {
   }
-  
+
 
 }

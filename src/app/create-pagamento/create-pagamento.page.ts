@@ -22,8 +22,8 @@ export class CreatePagamentoPage implements OnInit {
   }
 
   constructor(
-  private pagamentoService: PagamentoService,
-  private navCtrl: NavController) { }
+    private pagamentoService: PagamentoService,
+    private navCtrl: NavController) { }
 
   onClick() {
     this.pagamentoService.addCartao(this.cartao);

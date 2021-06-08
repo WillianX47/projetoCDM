@@ -13,11 +13,11 @@ export class CreateEnderecoPage implements OnInit {
   }
 
   public endereco = {
-    num : 0,
+    num: 0,
     log: '',
-    numCasa : '',
-    cep : '',
-    comp : '',
+    numCasa: '',
+    cep: '',
+    comp: '',
   }
 
   constructor(

@@ -8,12 +8,12 @@ import { ApiService } from '../api.service';
 })
 export class ContaPage implements OnInit {
 
-  
+
 
   constructor(private communication: ApiService) { }
 
   public userList = [];
-  
+
   ngOnInit() {
     this.communication.fetchUserList().then(
       () => {

@@ -3,8 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProdutosService } from 'src/app/produtos.service';
 import { Storage } from '@ionic/storage-angular';
-import {AlertController} from '@ionic/angular';
-import {ToastController} from '@ionic/angular';
+import { AlertController } from '@ionic/angular';
+import { ToastController } from '@ionic/angular';
 import { EnderecoService } from 'src/app/endereco.service';
 
 
@@ -15,13 +15,13 @@ import { EnderecoService } from 'src/app/endereco.service';
 })
 export class CarrinhoPage implements OnInit {
 
-  constructor(private route: Router, private cartaoitem: PagamentoService,private enderecoitem: EnderecoService, 
+  constructor(private route: Router, private cartaoitem: PagamentoService, private enderecoitem: EnderecoService,
     private item: ProdutosService, private storage: Storage, public alertController: AlertController,
-    public toastController: ToastController) {}
+    public toastController: ToastController) { }
 
 
   public click() {
-    this.route.navigate(['/main/pagamento']); 
+    this.route.navigate(['/main/pagamento']);
   }
 
   public clickEnde() {
@@ -29,7 +29,7 @@ export class CarrinhoPage implements OnInit {
   }
 
   public adicionarMais() {
-    this.route.navigate(['/main/produtos']); 
+    this.route.navigate(['/main/produtos']);
   }
 
   public produto = this.item.allProduto();
@@ -44,12 +44,12 @@ export class CarrinhoPage implements OnInit {
       message: 'Aproveite!!!!!',
       buttons: [
         {
-          text:  'Ok',
+          text: 'Ok',
         }
-      ] 
-    }); this.route.navigate(['/main/inicio']); 
+      ]
+    }); this.route.navigate(['/main/inicio']);
     alert.present();
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }

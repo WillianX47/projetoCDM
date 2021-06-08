@@ -15,7 +15,7 @@ type Cartao = {
 })
 
 export class PagamentoService {
-  
+
   constructor(private storage: Storage) {
     this.storage.clear();
     this.loadFromStorage();
@@ -28,30 +28,30 @@ export class PagamentoService {
       this.cartao.push(...storedCartao);
     }
   }
-  
-  public allCartao(): Readonly<Cartao>[] { 
+
+  public allCartao(): Readonly<Cartao>[] {
     return this.cartao;
-  } 
+  }
 
-  public getCartao(num: number): Cartao { 
-    return {...this.cartao.find((s) => s.num === num) }; 
-  } 
+  public getCartao(num: number): Cartao {
+    return { ...this.cartao.find((s) => s.num === num) };
+  }
 
-  public updateCartao(num: number, cartao: Cartao) { 
+  public updateCartao(num: number, cartao: Cartao) {
     const oldCartao = this.cartao.find((s) => s.num === num);
-    oldCartao.name = cartao.name; 
+    oldCartao.name = cartao.name;
     oldCartao.venc = cartao.venc;
     oldCartao.numCartao = cartao.numCartao;
     oldCartao.CPF = cartao.CPF;
     oldCartao.CVV = cartao.CVV;
 
     this.storage.set("cartao", this.cartao);
-  } 
+  }
 
   public addCartao(cartao: Cartao) {
     const maxNum = Math.max(0, ...this.cartao.map(s => s.num));
     cartao.num = maxNum + 1;
-    this.cartao.push({ ...cartao});
+    this.cartao.push({ ...cartao });
 
     this.storage.set('cartao', this.cartao);
   }

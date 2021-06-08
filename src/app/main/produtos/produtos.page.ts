@@ -11,7 +11,7 @@ export class ProdutosPage implements OnInit {
 
   constructor(public navCtrl1: NavController, private produtosService: ProdutosService) {
 
-}
+  }
 
   ngOnInit() {
   }
@@ -25,34 +25,34 @@ export class ProdutosPage implements OnInit {
     pedidoTotal: 0,
   }
 
-  public addAbacate(){
+  public addAbacate() {
     this.produtosService.Abacate(this.produto);
   }
-  public addBanana(){
+  public addBanana() {
     this.produtosService.Banana(this.produto);
   }
-  public addUva(){
+  public addUva() {
     this.produtosService.Uva(this.produto);
   }
-  public addLaranja(){
+  public addLaranja() {
     this.produtosService.Laranja(this.produto);
   }
-  public addMaca(){
+  public addMaca() {
     this.produtosService.Maca(this.produto);
   }
-  public addTomate(){
+  public addTomate() {
     this.produtosService.Tomate(this.produto);
   }
-  public addAlface(){
+  public addAlface() {
     this.produtosService.Alface(this.produto);
   }
-  public addPastelQ(){
+  public addPastelQ() {
     this.produtosService.PastelQ(this.produto);
   }
-  public addPastelC(){
+  public addPastelC() {
     this.produtosService.PastelC(this.produto);
   }
-  public addPastelP(){
+  public addPastelP() {
     this.produtosService.PastelP(this.produto);
   }
 

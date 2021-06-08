@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button color= "success" defaultHref="home"></ion-back-button>
+      <ion-back-button color="success" defaultHref="home"></ion-back-button>
     </ion-buttons>
     <ion-item>
       <ion-grid style="margin-left: 60px;">
@@ -41,6 +41,6 @@
   </ion-item>
   <br>
   <ion-button [disabled]="!cartao.CPF || !cartao.CVV || !cartao.venc || !cartao.numCartao || !cartao.name"
-   (click)="onClick()" color="success" expand="block" fill="outline">Salvar</ion-button>
+    (click)="onClick()" color="success" expand="block" fill="outline">Salvar</ion-button>
 
 </ion-content>

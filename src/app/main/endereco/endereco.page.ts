@@ -8,7 +8,7 @@ import { EnderecoService } from 'src/app/endereco.service';
 })
 export class EnderecoPage implements OnInit {
 
-  constructor( private ende: EnderecoService ) { }
+  constructor(private ende: EnderecoService) { }
 
   public endereco = this.ende.allEndereco();
 

@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./config.page.scss'],
 })
 export class ConfigPage implements OnInit {
-  
+
 
   constructor(private route: Router) { }
 

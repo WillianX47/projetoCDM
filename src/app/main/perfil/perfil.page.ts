@@ -15,7 +15,7 @@ export class PerfilPage implements OnInit {
   public userList = [];
 
 
-  public clickIcon(){
+  public clickIcon() {
     this.route.navigate(['/conta']);
   }
 
