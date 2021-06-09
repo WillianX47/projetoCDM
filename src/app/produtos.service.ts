@@ -142,15 +142,6 @@ export class ProdutosService {
     return { ...this.produto.find((s) => s.cont === cont) };
   }
 
-  public updateCartao(cont: number, produto: Produto) {
-    const oldProduto = this.produto.find((s) => s.cont === cont);
-    oldProduto.nomeProduto = produto.nomeProduto;
-    oldProduto.precoProduto = produto.precoProduto;
-    oldProduto.quantidadeProduto = produto.quantidadeProduto;
-
-    this.storage.set("produto", this.produto);
-  }
-
   public addProduto(produto: Produto) {
     const maxCont = Math.max(0, ...this.produto.map(s => s.cont));
     produto.cont = maxCont + 1;

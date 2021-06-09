@@ -74,10 +74,10 @@
 
     <ion-item>
       <ion-col>
-        <h5 style="color:white">Taxa de Entrega</h5>
+        <h5 >Taxa de Entrega</h5>
       </ion-col>
       <ion-col style="text-align: right;">
-        <h5 style="color:white">Grátis!</h5>
+        <h5>Grátis!</h5>
       </ion-col>
     </ion-item>
 
@@ -85,10 +85,10 @@
     <h6 *ngFor="let produto of produto; let cont = index; let isLast = last">
       <ion-item *ngIf="isLast == true">
         <ion-col>
-          <h5 *ngIf="isLast == true" style="color:white">Total</h5>
+          <h5 *ngIf="isLast == true">Total</h5>
         </ion-col>
         <ion-col style="text-align: right;">
-          <h5 *ngIf="isLast == true" style="color:white">R$ {{produto.pedidoTotal.toFixed(2)}}</h5>
+          <h5 *ngIf="isLast == true">R$ {{produto.pedidoTotal.toFixed(2)}}</h5>
         </ion-col>
       </ion-item>
     </h6>
